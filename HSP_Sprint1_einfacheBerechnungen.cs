@@ -6,7 +6,7 @@ namespace HSP_Sprint1_einfacheBerechnungen
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("asdf");
         }
     }
 }
