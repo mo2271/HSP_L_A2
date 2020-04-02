@@ -11,6 +11,12 @@ namespace HSP_Sprint1_einfacheBerechnungen
             double Xs, Ys;          //Flächenschwerpunktkoordinaten
             double Ixx, Iyy;        //Flächenträgheitsmomente
             string Basiseinheit;    //Abfrage der Einheit
+            string neustart;        //Abfrage, ob Programm wiederholt werden soll
+
+
+            do
+
+            {   //Euren Code bitte in diese Klammer einfügen. Danke!
 
 
 
@@ -20,20 +26,22 @@ namespace HSP_Sprint1_einfacheBerechnungen
 
 
 
+                Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
+                Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung:" + Xs + Basiseinheit);
+                Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung:" + Ys + Basiseinheit);
+                Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit + "^4");
+                Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit + "^4");
+                
+                
+                Console.WriteLine("Möchten Sie eine weitere Berechnung durchführen? (j/n)");        //Programmwiederholung?
+                neustart = Convert.ToString(Console.ReadLine());
+                
+            }
 
+            while (neustart == "j");
 
-
-
-
-            Console.WriteLine("Flächeninhalt:" + A + Basiseinheit+"^2");
-            Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung:" + Xs +Basiseinheit);
-            Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung:" + Ys +Basiseinheit);
-            Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit +"^4");
-            Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit +"^4");
+            Console.WriteLine("Das Berechnungstool wurde von Ihnen beendet. Zum Verlassen eine beliebige Taste drücken");
             Console.ReadKey();
-
-
-
 
 
         }
