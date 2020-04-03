@@ -26,21 +26,20 @@ namespace HSP_Sprint1_einfacheBerechnungen
                 Basiseinheit = Convert.ToString(Console.ReadLine());
                 Console.WriteLine("Start des Programms");
 
+                A = X * Y;      // Fläche Rechteck
+
+                Xs = X / 2;     // SWP-Koordinate von der unteren linken Ecke
+                Ys = Y / 2;     // SWP-Koordinate von der unteren linken Ecke
+
                 Ixx = (X * (Y ^ 3)) / 12;   // Berechnung FTM um die X-Achse
                 Iyy = (Y * (X ^ 3)) / 12;   // Berechnung FTM um die Y-Achse
 
-
-
-
-
-
                 Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
-                Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung:" + Xs + Basiseinheit);
-                Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung:" + Ys + Basiseinheit);
+                Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung (KO-System Ursprung unten links):" + Xs + Basiseinheit);
+                Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung (KO-System Ursprung unten links):" + Ys + Basiseinheit);
                 Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit + "^4");
                 Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit + "^4");
-                
-                
+                             
                 Console.WriteLine("Möchten Sie eine weitere Berechnung durchführen? (j/n)");        //Programmwiederholung?
                 neustart = Convert.ToString(Console.ReadLine());
                 
