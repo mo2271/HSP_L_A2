@@ -18,8 +18,8 @@ namespace HSP_Sprint1_einfacheBerechnungen
 
             {   //Euren Code bitte in diese Klammer einfügen. Danke!
 
-
-
+                Ixx = (X * (Y ^ 3)) / 12;   // Berechnung FTM um die X-Achse
+                Iyy = (Y * (X ^ 3)) / 12;   // Berechnung FTM um die Y-Achse
 
 
 
