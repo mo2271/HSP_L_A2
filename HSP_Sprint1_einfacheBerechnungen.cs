@@ -31,8 +31,8 @@ namespace HSP_Sprint1_einfacheBerechnungen
                 Xs = X / 2;     // SWP-Koordinate von der unteren linken Ecke
                 Ys = Y / 2;     // SWP-Koordinate von der unteren linken Ecke
 
-                Ixx = (X * (Y ^ 3)) / 12;   // Berechnung FTM um die X-Achse
-                Iyy = (Y * (X ^ 3)) / 12;   // Berechnung FTM um die Y-Achse
+                Ixx = (X * (Y*Y*Y)) / 12;   // Berechnung FTM um die X-Achse
+                Iyy = (Y * (X*X*X)) / 12;   // Berechnung FTM um die Y-Achse
 
                 Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
                 Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung (KO-System Ursprung unten links):" + Xs + Basiseinheit);
