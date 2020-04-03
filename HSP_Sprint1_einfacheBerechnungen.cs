@@ -17,6 +17,14 @@ namespace HSP_Sprint1_einfacheBerechnungen
             do
 
             {   //Euren Code bitte in diese Klammer einfügen. Danke!
+                
+                Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");    //Eingabe für X,Y und Basiseinheit.
+                X = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Bitte geben Sie die Kantenlänge Y ein:");
+                Y = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Bitte geben Sie eine Basiseinheit ein:");
+                Basiseinheit = Convert.ToString(Console.ReadLine());
+                Console.WriteLine("Start des Programms");
 
                 Ixx = (X * (Y ^ 3)) / 12;   // Berechnung FTM um die X-Achse
                 Iyy = (Y * (X ^ 3)) / 12;   // Berechnung FTM um die Y-Achse
