@@ -45,7 +45,29 @@ namespace Sprint1_Erweiterung__Uebung3_
 
             else if (profilabfrage == "4")    //Kreis-Hohlprofil
             {
+                Console.WriteLine("Außendurchmesser des Rohres:");
+                R = Convert.ToInt32(Console.ReadLine()) / 2;
 
+                Console.WriteLine("Wandstärke des Rohres:");
+                W = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Basiseinheit der Längen:");
+                Basiseinheit = Console.ReadLine();
+
+                A = (Math.Pow(R, 2) - Math.Pow((R - W), 2) * Math.PI);
+                Console.WriteLine("Flächeninhalt des Rohres: " + A + Basiseinheit + "^2");
+
+                Xs = R;
+                Console.WriteLine("Schwerpunktkoordinate in x-Richtung (Bezugspunkt unten links): " + Xs + Basiseinheit);
+
+                Ys = Xs;
+                Console.WriteLine("Schwerpunktkoordinate in x-Richtung (Bezugspunkt unten links): " + Ys + Basiseinheit);
+
+                Ixx = (Math.PI * (Math.Pow(R, 4) - Math.Pow((R - W), 4))) / 64;
+                Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Ixx + Basiseinheit + "m^4");
+
+                Iyy = Ixx;
+                Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Iyy+ Basiseinheit + "m^4");
             }
 
             else
@@ -54,7 +76,7 @@ namespace Sprint1_Erweiterung__Uebung3_
             }
 
 
-
+            Console.ReadKey();
         }
 
     }
