@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Sprint1_Erweiterung__Uebung3_
             double X, Y;            // Kantenlängen
             double A;               // Flächeninhalt
             double R;               // Radius
+            double D;               // Durchmesser
             double W;               // Wandstärke des Profils
             double Xs, Ys;          // Flächenschwerpunktkoordinaten
             double Ixx, Iyy;        // Flächenträgheitsmomente
@@ -60,7 +62,24 @@ namespace Sprint1_Erweiterung__Uebung3_
 
             else if (profilabfrage == "3")    //Kreis-Vollprofil
             {
+                Console.WriteLine("Bitte geben Sie den Durchmesser an:");
+                D = Convert.ToDouble(Console.ReadLine());       // Eingabe Durchmesser
+                Console.WriteLine("Bitte geben Sie die verwendete Basiseinheit an:");
+                Basiseinheit = Convert.ToString(Console.ReadLine());        // Angabe der Basiseinheit
+                Console.WriteLine("Kennwerte werden berechnet...");
 
+                A = Math.PI * Math.Pow((D / 4), 2);     // Flächeninhalt
+                Xs = D / 2;     // Flächenschwerpunkt X-Koordinate
+                Ys = Xs;        // Flächenschwerpunkt Y-Koordinate
+                Ixx = (Math.PI / 64) * Math.Pow(D, 4);      // Flächenträgheitsmoment
+                Iyy = Ixx;
+
+                Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
+                Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung (KO-System Ursprung unten links):" + Xs + Basiseinheit);
+                Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung (KO-System Ursprung unten links):" + Ys + Basiseinheit);
+                Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit + "^4");
+                Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit + "^4");
+                break;
             }
 
             else if (profilabfrage == "4")    //Kreis-Hohlprofil
