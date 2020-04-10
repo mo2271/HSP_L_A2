@@ -11,15 +11,18 @@ namespace Sprint1_Erweiterung__Uebung3_
     {
         static void Main(string[] args)
         {
-            while (abfrage == "Yes")
+            string Nutzerabfrage;   // Abfrage Ja/Nein
+            Nutzerabfrage = "Yes";
+
+            while (Nutzerabfrage == "Yes")
             {
 
                 Console.Clear();
 
                 double X, Y;            // Kantenlängen
                 double A;               // Flächeninhalt
-                double X, Y;            // Kantenlängen
-                double A;               // Flächeninhalt
+
+
                 double R;               // Radius
                 double D;               // Durchmesser
                 double W;               // Wandstärke des Profils
@@ -84,7 +87,7 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung (KO-System Ursprung unten links):" + Ys + Basiseinheit);
                     Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit + "^4");
                     Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit + "^4");
-                    break;
+
                 }
 
                 else if (profilabfrage == "4")    //Kreis-Hohlprofil
@@ -119,14 +122,19 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Console.WriteLine("Sie haben keine korrekte Ziffer für einen Profiltypen eingegeben!");
                 }
 
-                MessageBoxResult abfrage;
+
+                MessageBoxResult abfrage;   // Abfrage zum erneuten Programmdurchlauf über MessageBox
                 abfrage = MessageBox.Show("Möchten Sie eine weitere Berechnung durchführen?", "Programmende",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question
                     );
 
-                Console.ReadKey();
+                Nutzerabfrage = Convert.ToString(abfrage);  // Konvertiere Abfrage in Schleifen-String
+
+
             }
+            Console.WriteLine("Beliebige Taste drücken zum Beenden...");
+            Console.ReadKey();
         }
 
     }
