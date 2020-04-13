@@ -65,6 +65,31 @@ namespace Sprint1_Erweiterung__Uebung3_
 
                 else if (profilabfrage == "2")    //Rechteck Hohlprofil
                 {
+                    Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");    
+                    X = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Bitte geben Sie die Kantenlänge Y ein:");
+                    Y = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Bitte geben Sie die Wandstärke ein:");
+                    W = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Bitte geben Sie eine Basiseinheit ein:");
+                    Basiseinheit = Convert.ToString(Console.ReadLine());
+
+                    A = X * Y - ((X - W) * (Y - W));
+
+                    Xs = 0.5 * X;
+                    Ys = 0.5 * Y;
+
+                    Ixx = (((Y * Math.Pow(X, 3)) - ((Y - W)) * Math.Pow(X - W, 3))) * (1 / 12);
+                    Iyy = (((X* Math.Pow(Y, 3)) - ((X- W)) * Math.Pow(Y - W, 3))) * (1 / 12);
+
+
+                    Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
+                    Console.WriteLine("Flächenschwerpunktkoordinate in X Richtung (KO-System Ursprung unten links):" + Xs + Basiseinheit);
+                    Console.WriteLine("Flächenschwerpunktkoordinate in Y Richtung (KO-System Ursprung unten links):" + Ys + Basiseinheit);
+                    Console.WriteLine("Flächenträgheitsmoment um die x Achse:" + Ixx + Basiseinheit + "^4");
+                    Console.WriteLine("Flächenträgheitsmoment um die y Achse:" + Iyy + Basiseinheit + "^4");
+
+
 
                 }
 
