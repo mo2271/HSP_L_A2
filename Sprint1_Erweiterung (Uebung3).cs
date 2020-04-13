@@ -65,7 +65,7 @@ namespace Sprint1_Erweiterung__Uebung3_
 
                 else if (profilabfrage == "2")    //Rechteck Hohlprofil
                 {
-                    Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");    
+                    Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");
                     X = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Bitte geben Sie die Kantenlänge Y ein:");
                     Y = Convert.ToDouble(Console.ReadLine());
@@ -85,8 +85,13 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Xs = 0.5 * X;
                     Ys = 0.5 * Y;
 
+<<<<<<< HEAD
                     Ixx = (Y * Math.Pow(X, 3))/12 - ((yy) * Math.Pow(xx, 3))/12;
                     Iyy = (X* Math.Pow(Y, 3))/12 - ((xx) * Math.Pow(yy, 3))/12;
+=======
+                    Ixx = ((Y * Math.Pow(X, 3)) - ((yy) * Math.Pow(xx, 3))) / 12;
+                    Iyy = ((X * Math.Pow(Y, 3)) - ((xx) * Math.Pow(yy, 3))) / 12;
+>>>>>>> c7b2aab616bb450e4b738ae9cdae012e97bd9d35
 
 
                     Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
