@@ -44,9 +44,9 @@ namespace Sprint1_Erweiterung__Uebung3_
                     X = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Bitte geben Sie die Kantenlänge Y ein:");
                     Y = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Bitte geben Sie eine Basiseinheit ein:");
+                    Console.WriteLine("Bitte geben Sie die verwendete Basiseinheit an:");
                     Basiseinheit = Convert.ToString(Console.ReadLine());
-                    Console.WriteLine("Start des Programms");
+                    Console.WriteLine("Kennwerte werden berechnet...");
 
                     A = X * Y;      // Fläche Rechteck
 
@@ -73,6 +73,8 @@ namespace Sprint1_Erweiterung__Uebung3_
                     W = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Bitte geben Sie eine Basiseinheit ein:");
                     Basiseinheit = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine("Kennwerte werden berechnet...");
+
 
 
                     double xx, yy; //Innenseiten ohne Wandstärke
@@ -127,11 +129,12 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Console.WriteLine("Außendurchmesser des Rohres:");
                     R = Convert.ToInt32(Console.ReadLine()) / 2;
 
-                    Console.WriteLine("Wandstärke des Rohres:");
+                    Console.WriteLine("Bitte geben Sie die Wandstärke ein:");
                     W = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Basiseinheit der Längen:");
+                    Console.WriteLine("Bitte geben Sie die verwendete Basiseinheit an:");
                     Basiseinheit = Console.ReadLine();
+                    Console.WriteLine("Kennwerte werden berechnet...");
 
                     A = (Math.Pow(R, 2) - Math.Pow((R - W), 2) * Math.PI);
                     Console.WriteLine("Flächeninhalt des Rohres: " + A + Basiseinheit + "^2");
@@ -143,10 +146,10 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Console.WriteLine("Schwerpunktkoordinate in x-Richtung (Bezugspunkt unten links): " + Ys + Basiseinheit);
 
                     Ixx = (Math.PI * (Math.Pow(R, 4) - Math.Pow((R - W), 4))) / 64;
-                    Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Ixx + Basiseinheit + "m^4");
+                    Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Ixx + Basiseinheit + "^4");
 
                     Iyy = Ixx;
-                    Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Iyy + Basiseinheit + "m^4");
+                    Console.WriteLine("Flächenträgheitsmoment um die x-Achse: " + Iyy + Basiseinheit + "^4");
                 }
 
                 else
