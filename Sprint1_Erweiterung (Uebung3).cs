@@ -85,13 +85,9 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Xs = 0.5 * X;
                     Ys = 0.5 * Y;
 
-<<<<<<< HEAD
+
                     Ixx = (Y * Math.Pow(X, 3))/12 - ((yy) * Math.Pow(xx, 3))/12;
                     Iyy = (X* Math.Pow(Y, 3))/12 - ((xx) * Math.Pow(yy, 3))/12;
-=======
-                    Ixx = ((Y * Math.Pow(X, 3)) - ((yy) * Math.Pow(xx, 3))) / 12;
-                    Iyy = ((X * Math.Pow(Y, 3)) - ((xx) * Math.Pow(yy, 3))) / 12;
->>>>>>> c7b2aab616bb450e4b738ae9cdae012e97bd9d35
 
 
                     Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
