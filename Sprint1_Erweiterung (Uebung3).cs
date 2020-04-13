@@ -74,13 +74,19 @@ namespace Sprint1_Erweiterung__Uebung3_
                     Console.WriteLine("Bitte geben Sie eine Basiseinheit ein:");
                     Basiseinheit = Convert.ToString(Console.ReadLine());
 
-                    A = X * Y - ((X - W) * (Y - W));
+
+                    double xx, yy; //Innenseiten ohne Wandstärke
+
+                    xx = X - W;
+                    yy = Y - W;
+
+                    A = X * Y - ((xx) * (yy));
 
                     Xs = 0.5 * X;
                     Ys = 0.5 * Y;
 
-                    Ixx = (((Y * Math.Pow(X, 3)) - ((Y - W)) * Math.Pow(X - W, 3))) * (1 / 12);
-                    Iyy = (((X* Math.Pow(Y, 3)) - ((X- W)) * Math.Pow(Y - W, 3))) * (1 / 12);
+                    Ixx = ((Y * Math.Pow(X, 3)) - ((yy) * Math.Pow(xx, 3))) * (1 / 12);
+                    Iyy = ((X* Math.Pow(Y, 3)) - ((xx) * Math.Pow(yy, 3))) * (1 / 12);
 
 
                     Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
