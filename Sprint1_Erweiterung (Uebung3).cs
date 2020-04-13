@@ -65,7 +65,7 @@ namespace Sprint1_Erweiterung__Uebung3_
 
                 else if (profilabfrage == "2")    //Rechteck Hohlprofil
                 {
-                    Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");    
+                    Console.WriteLine("Bitte geben Sie die Kantenlänge X ein:");
                     X = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Bitte geben Sie die Kantenlänge Y ein:");
                     Y = Convert.ToDouble(Console.ReadLine());
