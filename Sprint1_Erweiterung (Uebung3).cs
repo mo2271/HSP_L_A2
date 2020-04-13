@@ -77,16 +77,16 @@ namespace Sprint1_Erweiterung__Uebung3_
 
                     double xx, yy; //Innenseiten ohne Wandstärke
 
-                    xx = X - W;
-                    yy = Y - W;
+                    xx = X - 2 * W;
+                    yy = Y - 2 * W;
 
                     A = X * Y - ((xx) * (yy));
 
                     Xs = 0.5 * X;
                     Ys = 0.5 * Y;
 
-                    Ixx = ((Y * Math.Pow(X, 3)) - ((yy) * Math.Pow(xx, 3))) * (1 / 12);
-                    Iyy = ((X* Math.Pow(Y, 3)) - ((xx) * Math.Pow(yy, 3))) * (1 / 12);
+                    Ixx = (Y * Math.Pow(X, 3))/12 - ((yy) * Math.Pow(xx, 3))/12;
+                    Iyy = (X* Math.Pow(Y, 3))/12 - ((xx) * Math.Pow(yy, 3))/12;
 
 
                     Console.WriteLine("Flächeninhalt:" + A + Basiseinheit + "^2");
